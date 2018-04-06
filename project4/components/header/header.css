@@ -1,0 +1,17 @@
+#personalHeader{
+    text-align: center;
+    font-family: "Al Nile";
+    color: coral;
+    font-weight: bold;
+    font-size:350%;
+
+}
+
+#headImg{
+
+    position: absolute;
+    right: 300px;
+    height: 10%;
+    width: 10%;
+
+}

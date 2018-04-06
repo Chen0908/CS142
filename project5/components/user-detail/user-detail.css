@@ -1,0 +1,33 @@
+div{
+    margin: 10px;
+}
+
+td{
+    padding-right: 20px;
+}
+
+.col-name{
+    font-weight:bold;
+    background-color: darksalmon;
+}
+
+.col-val{
+    font-family: "Comic Sans MS";
+    background-color: cornsilk;
+}
+
+#detail-table{
+    margin: 20px;
+}
+
+#photo-link{
+    text-decoration: none;
+    margin:20px;
+    font-family: "Chalkboard";
+    font-size: larger;
+    cursor: hand;
+}
+
+#photo-link:hover{
+    background-color: yellow;
+}

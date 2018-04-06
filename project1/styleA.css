@@ -1,0 +1,35 @@
+
+html, body{
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container div{
+    overflow: hidden;
+    text-align:center;
+    font-size: 40px;
+    font-family: Tahoma;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border-top: 1px solid #687291;
+    border-style: none;
+}
+
+#A,#C,#E{
+    background-color:  #dfe1e7;
+}
+#B,#D {
+    background-color: #eeeff2
+}
+
+#F {
+    line-height: 100px;
+    background-color: #687291;
+    border: 4px solid black;
+}

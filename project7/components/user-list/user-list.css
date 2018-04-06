@@ -1,0 +1,36 @@
+.users{
+    font-family: "Arial";
+    cursor: hand;
+    color: dodgerblue;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+
+.users:hover{
+    text-decoration: underline;
+    background-color: yellow;
+}
+#photo-count-bubble{
+    background-color:green;
+    color: white;
+
+}
+
+#comment-count-bubble{
+    background-color: red;
+
+}
+
+.bubble{
+    text-decoration: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    display:inline-block;
+
+
+    font-weight: bold;
+
+}
+

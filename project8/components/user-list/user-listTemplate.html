@@ -1,0 +1,10 @@
+<div id="sidnav-userList">
+    <div ng-repeat="user in allUsers">
+        <span>
+            <a href="#!/users/{{user._id}}" class="users">
+                {{user.first_name}} {{user.last_name}}
+            </a>
+        </span>
+
+    </div>
+</div>

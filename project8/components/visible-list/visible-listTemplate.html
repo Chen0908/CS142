@@ -1,0 +1,31 @@
+<md-dialog>
+    <form ng-cloak>
+        <md-toolbar>
+            <div>
+                <h2>Privacy Setting </h2>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div >
+                <h2> Share to </h2>
+                <div ng-repeat="user in visible.allUsers">
+                    <md-checkbox ng-model="visible.selected[user._id]" >
+                        {{user.first_name + " " + user.last_name}}
+                    </md-checkbox>
+                </div>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button ng-click="visible.cancel()">
+                Share to all
+            </md-button>
+            <span flex></span>
+
+            <md-button ng-click="visible.submitVisible()">
+                Share to selected
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

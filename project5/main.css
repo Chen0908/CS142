@@ -1,0 +1,31 @@
+/*
+CSS for the CS142 project #5 main page
+
+Since CSS uses a global name space for classes we should use class names starting with
+cs142-main- here.
+*/
+
+#context{
+    display: block;
+    position: absolute;
+    right: 5px;
+    font-size: small;
+    font-weight: bold;
+}
+
+.my-header{
+    display: block;
+    padding: 15px;
+}
+
+#button{
+    display: block;
+    align-items: center;
+    margin: auto;
+
+}
+
+#version{
+    display: block;
+    padding: 15px;
+}

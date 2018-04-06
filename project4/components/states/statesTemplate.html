@@ -1,0 +1,20 @@
+<!--Replaced this with the Angular template for states component of CS142 Project #4
+    Problem #2.-->
+<!doctype html>
+
+<div>
+   <div>
+    <span id = "hint"> contains:  </span> <input id = "input" type = "text" ng-model="contains" >
+   </div>
+
+    <div> States contains substring : {{contains}} </div>
+    <div id = "list">
+        <ul>
+            <li ng-repeat="state in filteredItems = (states| filter: contains)">
+            <span class="stateList"> {{state}}</span>
+            </li>
+        </ul>
+        <p ng-hide="filteredItems.length"> No one found! </p>
+    </div>
+
+</div>

@@ -1,0 +1,79 @@
+<div id="container">
+
+    <form name="login-form" ng-if="login.returnUser" ng-submit="login.submitLogin()" id="login-form">
+        <md-input-container id="login_username">
+            <label> username </label>
+            <input name="login_name" ng-model="login.login_name">
+
+
+        </md-input-container>
+
+        <md-input-container id="password">
+            <label> password </label>
+            <input type="password" name="password" ng-model="login.password">
+        </md-input-container>
+        <br/>
+        <md-button type="submit">Login</md-button>
+        <md-button ng-click="login.register_me()"> New User? Register here! </md-button>
+
+    </form>
+
+
+    <form name="register-form" ng-if="!login.returnUser" ng-submit="login.submitRegister()" id="register-form">
+        <md-input-container>
+            <label> Login Name </label>
+            <input name="register_name" ng-model="login.new_user.login_name">
+        </md-input-container>
+
+        <div>
+            <md-input-container>
+                <label> Password </label>
+                <input type="password" name="new_password" ng-model="login.new_user.password">
+            </md-input-container>
+
+            <md-input-container>
+                <label> Confirm password </label>
+                <input type="password" name="new_password_confirm" ng-model="login.new_user.confirm_password">
+            </md-input-container>
+
+        </div>
+
+        <div>
+            <md-input-container>
+                <label> First Name </label>
+                <input name="first_name" ng-model="login.new_user.first_name">
+            </md-input-container>
+
+            <md-input-container>
+                <label> Last Name </label>
+                <input name="last_name" ng-model="login.new_user.last_name">
+            </md-input-container>
+        </div>
+        <div>
+            <md-input-container>
+                <label> Location </label>
+                <input name="location" ng-model="login.new_user.location">
+            </md-input-container>
+        </div>
+
+        <div>
+            <md-input-container>
+                <label> Description </label>
+                <input name="description" ng-model="login.new_user.description">
+            </md-input-container>
+        </div>
+        <div>
+            <md-input-container>
+                <label> Occupation </label>
+                <input name="occupation" ng-model="login.new_user.occupation">
+            </md-input-container>
+        </div>
+        <div>
+            <md-button type="submit"> Register Me</md-button>
+        </div>
+
+
+    </form>
+
+
+</div>

@@ -1,0 +1,50 @@
+<div ng-if="!main.advanced">
+
+    <div ng-repeat="photo in photo.photos">
+        <div class="container">
+
+            <div>Posted at {{photo.date_time}}</div>
+            <img ng-src="/images/{{photo.file_name}}"/>
+
+            <div class="comment" ng-if="photo.comments">
+                Comments
+            </div>
+            <div ng-if="!photo.comments">
+                No comments yet.
+            </div>
+
+            <div ng-repeat="comment in photo.comments">
+                <span class="comment-info">Comment by  <a class="switchUser" href="#!/users/{{comment.user._id}}">{{comment.user.first_name}} {{comment.user.last_name}}</a> at {{comment.date_time}}</span>
+                <div class="comment-text">{{comment.comment}}</div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div ng-if="main.advanced">
+
+    <div class="navigate">
+        <button id="left" ng-click="photo.goLeft()"> < </button>
+        <button id="right" ng-click="photo.goRight()"> > </button>
+    </div>
+
+    <div class="container" ng-if="photo.currentPhoto">
+        <div>Posted at {{photo.currentPhoto.date_time}}</div>
+        <img ng-src="/images/{{photo.currentPhoto.file_name}}" />
+        <div class="comment" ng-if="photo.currentPhoto.comments">
+            Comments
+        </div>
+        <div ng-if="!photo.currentPhoto.comments">
+            No comments yet.
+        </div>
+
+        <div ng-repeat="comment in photo.currentPhoto.comments">
+            <span class="comment-info">Comment by <a class="switchUser" href="#!/users/{{comment.user._id}}">{{comment.user.first_name}} {{comment.user.last_name}}</a> at {{comment.date_time}}</span>
+            <div class="comment-text">{{comment.comment}}</div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,18 @@
+.inBound{
+    color: black;
+    cursor: pointer;
+}
+
+.outBound{
+    color: lightgrey;
+}
+
+
+.inBound:hover{
+    background-color:deepskyblue;
+}
+
+#selected{
+    color: aliceblue;
+    background-color: dodgerblue;
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="cs142App" ng-controller="MainController">
+  <head>
+      <title>{{main.title || "CS142 Class Project"}}</title>
+      <script src="node_modules/angular/angular.js"></script>
+      <script src="node_modules/angular-route/angular-route.min.js"></script>
+
+      <script src="mainController.js"></script>
+      <script src="components/states/statesController.js"></script>
+      <script src="components/header/headerController.js"></script>
+      <link rel="stylesheet" type="text/css" href="components/states/states.css" />
+      <link rel="stylesheet" type="text/css" href="components/header/header.css" />
+      <link rel="stylesheet" type="text/css" href="main.css" />
+
+      <script src="components/example/exampleController.js"></script>
+      <link rel="stylesheet" type="text/css" href="components/example/example.css"/>
+      <script src="modelData/example.js"></script>
+
+      <script src="modelData/states.js"></script>
+
+  </head>
+
+
+  <body>
+  <div ng-include="'components/header/headerTemplate.html'" ng-controller="HeaderController"></div>
+  <div ng-include="'components/states/statesTemplate.html'" ng-controller="StatesController"></div>
+
+  </body>
+</html>

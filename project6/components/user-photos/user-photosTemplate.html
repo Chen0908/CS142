@@ -1,0 +1,25 @@
+<div>
+
+    <div ng-repeat="photo in photo.photos">
+        <div class="container">
+
+            <div>Posted at {{photo.date_time}}</div>
+            <img ng-src="/images/{{photo.file_name}}"/>
+
+            <div class="comment" ng-if="photo.comments">
+                Comments
+            </div>
+            <div ng-if="photo.comments.length===0">
+                No comments yet.
+            </div>
+
+            <div ng-repeat="comment in photo.comments">
+                <span class="comment-info">Comment by  <a class="switchUser" href="#!/users/{{comment.user._id}}">{{comment.user.first_name}} {{comment.user.last_name}}</a> at {{comment.date_time}}</span>
+                <div class="comment-text">{{comment.comment}}</div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+

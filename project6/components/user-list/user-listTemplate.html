@@ -1,0 +1,22 @@
+<div id="sidnav-userList">
+    <div ng-repeat="user in allUsers">
+        <span>
+            <a href="#!/users/{{user._id}}" class="users">
+                {{user.first_name}} {{user.last_name}}
+            </a>
+        </span>
+        <span class="bubble" ng-if="main.advanced" id="photo-count-bubble">
+            <a href="#!/photos/{{user._id}}">
+                {{userPhotoCount}}
+            </a>
+        </span>
+
+        <span class="bubble" ng-if="main.advanced" id="comment-count-bubble">
+            <a href="#!/comments/{{user._id}}">
+                {{userCommentCount}}
+            </a>
+        </span>
+
+
+    </div>
+</div>

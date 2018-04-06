@@ -1,0 +1,88 @@
+<div id="user-detail-container">
+    <h2>
+        Here is the user detail of {{selectedUser.first_name}} {{selectedUser.last_name}}
+    </h2>
+
+    <div>
+
+        <table id="detail-table">
+            <tr>
+                <td class="col-name">Full Name</td>
+                <td class="col-val"> {{selectedUser.first_name}} {{selectedUser.last_name}}</td>
+            </tr>
+
+            <tr>
+                <td class="col-name">Location</td>
+                <td class="col-val"> {{selectedUser.location}}</td>
+            </tr>
+            <tr>
+                <td class="col-name">Description</td>
+                <td class="col-val"> {{selectedUser.description}}</td>
+            </tr>
+
+            <tr>
+                <td class="col-name">Occupation</td>
+                <td class="col-val"> {{selectedUser.occupation}}</td>
+            </tr>
+
+
+        </table>
+
+        <a href="#!/photos/{{selectedUser._id}}" id="photo-link"> View All Photos</a>
+
+    </div>
+
+
+    <div>
+
+        <h2>Mentions </h2>
+        <div ng-if="selectedUser.mentioned_by.length > 0" ng-repeat="mention in selectedUser.mentioned_by">
+            <span> <a href="#!/photos/{{mention.photo_user_id}}"> <img class="thumbnail"
+                                                                       ng-src="/images/{{mention.photo_file}}"/> </a></span>
+            <span class="mentionUser"> Mentioned by:  <a href="#!/users/{{mention.user_id}}">{{mention.first_name}} {{mention.last_name}} </a>  </span>
+            <span> at {{mention.date_time}}</span>
+
+        </div>
+
+        <div ng-if="selectedUser.mentioned_by.length <= 0">
+            No mentions yet.
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<div>
+
+    <h2>Summary</h2>
+
+    <div>
+        <h3>Recently upload</h3>
+        <div>
+            <span> <a href="#!/photos/{{selectedUser.mostRecentPhoto.user_id}}"> <img class="thumbnail"
+                                                                                      ng-src="/images/{{selectedUser.mostRecentPhoto.file_name}}"/> </a> </span>
+            <span> Uploaded at {{selectedUser.mostRecentPhoto.date_time}}</span>
+
+        </div>
+
+        <h3> Most Comment </h3>
+
+        <div>
+            <span> <a href="#!/photos/{{selectedUser.mostCommentPhoto.user_id}}"> <img class="thumbnail"
+                                                                                       ng-src="/images/{{selectedUser.mostCommentPhoto.file_name}}"/> </a> </span>
+            <span> Comment number:  {{selectedUser.mostCommentPhoto.commentCnt}}</span>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+</div>

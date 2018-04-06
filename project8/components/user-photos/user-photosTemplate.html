@@ -1,0 +1,74 @@
+<div>
+
+    <div ng-repeat="photo in userphoto.photos">
+        <div class="container">
+
+            <div>Posted at {{photo.date_time}}</div>
+            <div>
+                <md-button ng-if="!userphoto.hasLiked(photo)" ng-click="userphoto.submitLike(photo)"> Like </md-button>
+                <span><img id="thumb" ng-src="thumb.png" ng-if="userphoto.hasLiked(photo)"/> </span>
+                <md-button ng-if="userphoto.hasLiked(photo)" ng-click="userphoto.submitUnlike(photo)"> Unlike </md-button>
+                <span id="like-num">Likes: {{photo.likeNum}}</span>
+            </div>
+            <img ng-src="/images/{{photo.file_name}}"/>
+
+            <div class="comment" ng-if="photo.comments">
+                Comments
+            </div>
+            <div ng-if="photo.comments.length===0">
+                No comments yet.
+            </div>
+
+            <div ng-repeat="comment in photo.comments">
+                <span class="comment-info">Comment by  <a class="switchUser" href="#!/users/{{comment.user._id}}">{{comment.user.first_name}} {{comment.user.last_name}}</a> at {{comment.date_time}}</span>
+                <div class="comment-text">{{comment.comment}}</div>
+            </div>
+
+
+            <div>
+
+                <form name="postCommentForm" ng-submit="userphoto.submitComment(photo)">
+                    <span>
+                        <md-input-container>
+                            <label>Your comment</label>
+                            <input  mentio
+                                    mentio-items="people"
+                                    type="text"
+                                    class="form-control"
+                                    ng-trim="false"
+                                    size="100"
+                                    mentio-select="mention(item)"
+                                    mentio-id="'commentInput' + photo._id"
+                                    ng-model="userphoto.commentInputs[photo._id]">
+
+                         </md-input-container>
+
+
+                    </span>
+
+
+                    <span>
+                        <md-button id="submit-comment" type="submit">
+                            Comment
+                        </md-button>
+
+                    </span>
+
+
+                </form>
+            </div>
+
+        </div>
+
+
+        <!--<mentio-menu-->
+                <!--mentio-for="'test'"-->
+                <!--mentio-trigger-char="'@'"-->
+                <!--mentio-items="people"-->
+                <!--mentio-search="searchTags()">-->
+        <!--</mentio-menu>-->
+
+    </div>
+
+</div>
+

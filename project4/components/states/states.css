@@ -1,0 +1,28 @@
+/*
+CSS for the CS142 project #4 Problem #2 states component
+
+Since CSS uses a global name space for classes we should use names starting with
+cs142-states- here.
+*/
+
+.stateList{
+    font-family: Georgia;
+    cursor: pointer;
+}
+div{
+    margin: 10px;
+    border: 10px;
+}
+
+.stateList:hover{
+    background-color: dodgerblue;
+}
+
+#hint{
+    font-weight: bold;
+}
+
+#list{
+    border-style: ridge;
+}
+

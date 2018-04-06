@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    height: 100%;
+    white-space: nowrap;   
+}
+
+.container div{
+    position: relative;
+    font-size: 40px;
+    font-family: Tahoma;
+    margin: 20px; 
+    text-align: center;
+    border: 5px solid #687291;
+    width: 100px;
+    height: 150px;
+    background-color: #eeeff2;
+    cursor: pointer;    
+}
+
+#A{
+   /* gradient  */
+    background: -webkit-linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1));
+}
+
+#B:hover{
+    /* trainsition */
+    width: 300px;
+    height: 300px;
+}
+
+#C{
+    /* animation  */
+    animation-name: my-animation; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite; 
+}
+@keyframes my-animation {
+    0%   {background-color:darkseagreen; left:0px; top:0px;}
+    25%  {background-color:yellowgreen; left:0px; top:200px;}
+    50%  {background-color:skyblue; left:100px; top:200px;}
+    75%  {background-color:coral; left:0px; top:200px;}
+    100% {background-color:darkseagreen; left:0px; top:0px;}
+}
+
+#D{
+    /* shadow  */
+    box-shadow: 10px 10px grey;
+    color: darkorchid;
+    text-shadow: 10px 5px grey;
+}
+
+.container div:hover{
+    background-color:yellow;
+}
+
+
+

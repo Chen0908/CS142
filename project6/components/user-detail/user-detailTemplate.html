@@ -1,0 +1,31 @@
+<div id = "user-detail-container">
+    <h2>
+        Here is the user detail of {{selectedUser.first_name}} {{selectedUser.last_name}}
+    </h2>
+
+    <table id="detail-table">
+        <tr>
+            <td class = "col-name">User ID: </td> <td class = "col-val"> {{selectedUser._id}}</td>
+        </tr>
+        <tr>
+            <td class = "col-name">Full Name </td> <td class = "col-val"> {{selectedUser.first_name}} {{selectedUser.last_name}}</td>
+        </tr>
+
+        <tr>
+            <td class = "col-name">Location </td> <td class = "col-val"> {{selectedUser.location}}</td>
+        </tr>
+        <tr>
+            <td class = "col-name">Description </td> <td class = "col-val"> {{selectedUser.description}}</td>
+        </tr>
+
+        <tr>
+            <td class = "col-name">Occupation </td> <td class = "col-val"> {{selectedUser.occupation}}</td>
+        </tr>
+
+
+    </table>
+
+    <a href="#!/photos/{{selectedUser._id}}" id = "photo-link"> View All Photos</a>
+
+
+</div>

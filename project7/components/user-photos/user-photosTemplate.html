@@ -1,0 +1,46 @@
+<div>
+
+    <div ng-repeat="photo in userphoto.photos">
+        <div class="container">
+
+            <div>Posted at {{photo.date_time}}</div>
+            <img ng-src="/images/{{photo.file_name}}"/>
+
+            <div class="comment" ng-if="photo.comments">
+                Comments
+            </div>
+            <div ng-if="photo.comments.length===0">
+                No comments yet.
+            </div>
+
+            <div ng-repeat="comment in photo.comments">
+                <span class="comment-info">Comment by  <a class="switchUser" href="#!/users/{{comment.user._id}}">{{comment.user.first_name}} {{comment.user.last_name}}</a> at {{comment.date_time}}</span>
+                <div class="comment-text">{{comment.comment}}</div>
+            </div>
+
+
+            <div>
+
+                <form name="postCommentForm" ng-submit="userphoto.submitComment(photo)">
+                    <span>
+                        <md-input-container>
+                            <label>Your comment</label>
+                            <input name="commentInput{{photo._id}}" ng-model="userphoto.commentInputs[photo._id]">
+                         </md-input-container>
+                    </span>
+                    <span>
+                        <md-button id="submit-comment" type="submit">
+                            Comment
+                        </md-button>
+
+                    </span>
+
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+

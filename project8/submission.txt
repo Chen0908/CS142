@@ -1,0 +1,48 @@
+Project #8 - Submission form
+
+Please fill in this form and submit it with your project #8.
+
+Enter no more than 5 user stories that you did for the assignment that you would like to be
+graded on. For each story include the following information:
+
+Story number and name:1 - Extend user profile with usage
+Story points: 3
+Brief description to see the story in action: In user detail page, there will be a section  called Summary. This section contains the recent uploaded photo and the photo with the most comment. Click the thumbnail of the picture will lead you to the user’s photo page.
+
+Story number and name:2 - @mentions in comments
+Story points: 6
+Brief description to see the story in action: In comment input area, click ‘@‘ will trigger a list of users. Selecting one of the user will add a mention to this user. If you submit the comment, in the photo detail page of the mentioned user, we will see a brief summary of the mention event.
+
+Story number and name:3 - Visibility control on photos
+Story points: 4
+Brief description to see the story in action: Selecting a picture file and clicking on the “upload new photos” button will trigger a new window with a list of users. You can select some of them and then click “Share to selected”, this will make this photo visible only to selected users. You can also click “Share to all”. This will make this photo public.
+
+Story number and name:6 - Photo like votes
+Story points: 4
+Brief description to see the story in action: You can like a photo by clicking the like button will make you like this button. The number of likes will increase 1. Then the button will switch to “unlike”. Clicking “unlike” will unlike the photo, and the number of likes of that photo will decrease 1.
+
+Total Story Points: 15
+
+Marketing Video URL (ensure permissions are set to public viewing):https://youtu.be/EQ_EyqWElJw
+Is it OK with you if we post your Marketing Video URL on the class discussion forum? No
+
+Any special instructions for Grading (should be easy to run app from new machine):
+Since I implemented visibility control, for session user who are not allowed to see certain photo, a cancel icon will show as thumbnail for mention and user activity summary.
+
+
+************************************ Example *******************
+* As an example for if you did only story 5 your file would look like:
+* 
+* Story number and name:  5 - Activity Feed
+* Story points:  4
+* Brief description to see the story in action:
+* Push the button labeled Activity on the toolbar and view the 10 most recent activities of the
+* current user.
+* 
+* Total Story Points: 4
+* 
+* Marketing Video URL (ensure permissions are set to public viewing): http://www.youtube.com ---
+* 
+* Is it OK with you if we post your Marketing Video URL on the class discussion forum? Yes
+* 
+* Instructions for Grading (should be easy to run app from new machine): None

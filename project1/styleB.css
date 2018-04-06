@@ -1,0 +1,36 @@
+.container{   
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.container div{
+    display: inline-block;
+    font-size: 40px;
+    font-family: Tahoma;
+    border-left: 10px dotted #D0D0FF;      
+    padding-left: 10px;
+    width: 100px;
+    height: 150px;
+    background-color: #eeeff2;
+    cursor: pointer;   
+}
+
+.container div:hover{
+    background-color:yellow;
+}
+
+#A,#B,#C,#D,#E{
+    margin-left: 10px;   
+}
+
+
+#F{ 
+    position: absolute;
+    bottom: 10px;
+    right: 10px;    
+}
+
+#F:hover{
+    background-color: goldenrod;
+}

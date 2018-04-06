@@ -1,0 +1,38 @@
+.comment-text{
+    font-size: large;
+    font-style: italic;
+}
+
+.comment-info{
+    font-size:smaller;
+}
+
+.comment{
+    font-size:larger;
+    font-weight: bold;
+}
+
+.container{
+    padding-top: 20px;
+    border-bottom-style: ridge;
+}
+
+img {
+    border-radius: 8px;
+}
+
+.navigate{
+    margin: auto;
+}
+
+.switchUser{
+    text-decoration: none;
+    font-weight: bold;
+    color: dodgerblue;
+    cursor: hand;
+}
+
+.switchUser:hover{
+    background-color: yellow;
+}
+

@@ -1,0 +1,13 @@
+.idea
+
+coverage
+test-reports
+node_modules
+bower_components
+*.sublime-workspace
+
+*.sublime-project
+
+src/templates.js
+
+ment.io/tinymce.js
